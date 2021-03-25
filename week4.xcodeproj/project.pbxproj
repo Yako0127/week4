@@ -13,11 +13,12 @@
 		E759808225F6734500EA4158 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E759808125F6734500EA4158 /* GoogleService-Info.plist */; };
 		E79EC4E025EB4B8C00E95F46 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79EC4DF25EB4B8C00E95F46 /* AppDelegate.swift */; };
 		E79EC4E225EB4B8C00E95F46 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79EC4E125EB4B8C00E95F46 /* SceneDelegate.swift */; };
-		E79EC4E425EB4B8C00E95F46 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79EC4E325EB4B8C00E95F46 /* ViewController.swift */; };
 		E79EC4E725EB4B8C00E95F46 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E79EC4E525EB4B8C00E95F46 /* Main.storyboard */; };
 		E79EC4E925EB4B8D00E95F46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E79EC4E825EB4B8D00E95F46 /* Assets.xcassets */; };
 		E79EC4F725EB4B8D00E95F46 /* week4Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79EC4F625EB4B8D00E95F46 /* week4Tests.swift */; };
 		E79EC50225EB4B8D00E95F46 /* week4UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79EC50125EB4B8D00E95F46 /* week4UITests.swift */; };
+		E7A62485260B92E600B1F7EE /* Login_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A62484260B92E600B1F7EE /* Login_ViewController.swift */; };
+		E7A6248A260B931100B1F7EE /* SignUp_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A62489260B931100B1F7EE /* SignUp_ViewController.swift */; };
 		E7AB1E8825EBDA1F00F2234F /* drink_info.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AB1E8725EBDA1F00F2234F /* drink_info.swift */; };
 		E7FBB3AD25EB58230046FDF5 /* Menu_Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7FBB3AC25EB58230046FDF5 /* Menu_Scene.swift */; };
 		E7FBB3B225EB588E0046FDF5 /* Order_Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7FBB3B125EB588E0046FDF5 /* Order_Scene.swift */; };
@@ -56,7 +57,6 @@
 		E79EC4DC25EB4B8C00E95F46 /* week4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = week4.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E79EC4DF25EB4B8C00E95F46 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E79EC4E125EB4B8C00E95F46 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E79EC4E325EB4B8C00E95F46 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E79EC4E625EB4B8C00E95F46 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E79EC4E825EB4B8D00E95F46 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E79EC4ED25EB4B8D00E95F46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -66,6 +66,8 @@
 		E79EC4FD25EB4B8D00E95F46 /* week4UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = week4UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E79EC50125EB4B8D00E95F46 /* week4UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = week4UITests.swift; sourceTree = "<group>"; };
 		E79EC50325EB4B8D00E95F46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E7A62484260B92E600B1F7EE /* Login_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login_ViewController.swift; sourceTree = "<group>"; };
+		E7A62489260B931100B1F7EE /* SignUp_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp_ViewController.swift; sourceTree = "<group>"; };
 		E7AB1E8725EBDA1F00F2234F /* drink_info.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = drink_info.swift; sourceTree = "<group>"; };
 		E7FBB3AC25EB58230046FDF5 /* Menu_Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu_Scene.swift; sourceTree = "<group>"; };
 		E7FBB3B125EB588E0046FDF5 /* Order_Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order_Scene.swift; sourceTree = "<group>"; };
@@ -151,12 +153,13 @@
 			children = (
 				E79EC4DF25EB4B8C00E95F46 /* AppDelegate.swift */,
 				E79EC4E125EB4B8C00E95F46 /* SceneDelegate.swift */,
-				E79EC4E325EB4B8C00E95F46 /* ViewController.swift */,
 				E79EC4E525EB4B8C00E95F46 /* Main.storyboard */,
 				E79EC4E825EB4B8D00E95F46 /* Assets.xcassets */,
 				E79EC4ED25EB4B8D00E95F46 /* Info.plist */,
 				E7FBB3AC25EB58230046FDF5 /* Menu_Scene.swift */,
+				E7A62484260B92E600B1F7EE /* Login_ViewController.swift */,
 				E7FBB3BE25EB58D30046FDF5 /* OrderData_Scene.swift */,
+				E7A62489260B931100B1F7EE /* SignUp_ViewController.swift */,
 				E7AB1E8725EBDA1F00F2234F /* drink_info.swift */,
 				E7FBB3B125EB588E0046FDF5 /* Order_Scene.swift */,
 				E759808125F6734500EA4158 /* GoogleService-Info.plist */,
@@ -424,10 +427,11 @@
 			files = (
 				E7FBB3B225EB588E0046FDF5 /* Order_Scene.swift in Sources */,
 				E7FBB3BF25EB58D30046FDF5 /* OrderData_Scene.swift in Sources */,
+				E7A6248A260B931100B1F7EE /* SignUp_ViewController.swift in Sources */,
 				E7AB1E8825EBDA1F00F2234F /* drink_info.swift in Sources */,
-				E79EC4E425EB4B8C00E95F46 /* ViewController.swift in Sources */,
 				E7FBB3AD25EB58230046FDF5 /* Menu_Scene.swift in Sources */,
 				E79EC4E025EB4B8C00E95F46 /* AppDelegate.swift in Sources */,
+				E7A62485260B92E600B1F7EE /* Login_ViewController.swift in Sources */,
 				E79EC4E225EB4B8C00E95F46 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

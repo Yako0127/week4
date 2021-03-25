@@ -15,7 +15,7 @@ class OrderData_SceneCell: UITableViewCell {
     @IBOutlet weak var drinkLabel: UILabel!
     @IBOutlet weak var sizeLabel: UILabel!
     @IBOutlet weak var sugarLabel: UILabel!
-    @IBOutlet weak var codeLabel: UILabel!
+    @IBOutlet weak var coldLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
     
 }
@@ -51,12 +51,12 @@ class OrderData_Scene: UITableViewController {
     
     // 每個 cell 要顯示的內容
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "order", for: indexPath) as! OrderData_SceneCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "order_data", for: indexPath) as! OrderData_SceneCell
         cell.nameLabel.text = nameList[indexPath.row]
         cell.drinkLabel.text = drinkList[indexPath.row]
         cell.sizeLabel.text = sizeList[indexPath.row]
         cell.sugarLabel.text = sugarList[indexPath.row]
-        cell.codeLabel.text = codeList[indexPath.row]
+        cell.coldLabel.text = coldList[indexPath.row]
         cell.priceLabel.text = priceList[indexPath.row]
         return cell
     }
@@ -85,7 +85,7 @@ class OrderData_Scene: UITableViewController {
             self.drinkList.remove(at: indexPath.row)
             self.sizeList.remove(at: indexPath.row)
             self.sugarList.remove(at: indexPath.row)
-            self.codeList.remove(at: indexPath.row)
+            self.coldList.remove(at: indexPath.row)
             self.priceList.remove(at: indexPath.row)
             self.showTableview.deleteRows(at: [indexPath], with: .automatic)
         }))
@@ -97,11 +97,10 @@ class OrderData_Scene: UITableViewController {
     var drinkList:[String] = []
     var sizeList:[String] = []
     var sugarList:[String] = []
-    var codeList:[String] = []
+    var coldList:[String] = []
     var priceList:[String] = []
     
     func readData(){
-        
     db.collection("orders").getDocuments { (querySnapshot, error) in
             if let querySnapshot = querySnapshot {
                 for document in querySnapshot.documents {
@@ -110,7 +109,7 @@ class OrderData_Scene: UITableViewController {
                     self.drinkList.append(document.data()["drink"] as! String)
                     self.sizeList.append(document.data()["size"] as! String)
                     self.sugarList.append(document.data()["sugar"] as! String)
-                    self.codeList.append(document.data()["code"] as! String)
+                    self.coldList.append(document.data()["cold"] as! String)
                     self.priceList.append(document.data()["price"] as! String)
                 }
             }

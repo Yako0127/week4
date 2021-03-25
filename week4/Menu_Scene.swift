@@ -19,14 +19,14 @@ class MenuListTableViewCell: UITableViewCell{
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var price: UILabel!
     @IBOutlet weak var content: UILabel!
-    @IBOutlet weak var img: UIImageView!
+ //   @IBOutlet weak var img: UIImageView!
     
    //update data on menu page
     func update(with cellData: DrinkData) {
         name.text = cellData.name
         content.text = cellData.content
         price.text = cellData.price
-        img.image = UIImage(named: cellData.image!)
+    //    img.image = UIImage(named: cellData.image!)
     }
 }
 class Menu_Scene: UIViewController,UITableViewDelegate, UITableViewDataSource {

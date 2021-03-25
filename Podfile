@@ -9,6 +9,7 @@ use_frameworks!
 pod 'Firebase/Analytics'
 pod 'Firebase/Firestore'
 pod 'Firebase/Core'
+        pod 'Firebase/Auth'
 target 'week4Tests' do
 inherit! :search_paths
 # Pods for testing

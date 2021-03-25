@@ -10,6 +10,7 @@
 import UIKit
 import Firebase
 import FirebaseFirestore
+import FirebaseAuth
 
 class Order_Scene: UITableViewController {
     
@@ -21,12 +22,12 @@ class Order_Scene: UITableViewController {
         db = Firestore.firestore()
         setCellData(with: cellData!)
     }
-
+  //  var user = Firebase.auth().currentUser;
 //    Choose Order Label
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var contentLabel: UILabel!
-    @IBOutlet weak var imgLabel: UIImageView!
+ //   @IBOutlet weak var imgLabel: UIImageView!
     
 //    Choose Order Type Label
     @IBOutlet weak var orderNameLabel: UITextField!
@@ -38,7 +39,7 @@ class Order_Scene: UITableViewController {
         nameLabel.text = cellData.name
         priceLabel.text = cellData.price
         contentLabel.text = cellData.content
-        imgLabel.image = UIImage(named: cellData.image!)
+       /* imgLabel.image = UIImage(named: cellData.image!)*/
     }
 
     @IBAction func orderSend(_ sender: Any) {
@@ -58,7 +59,7 @@ class Order_Scene: UITableViewController {
                     print(error)
                 }
             }
-        self.performSegue(withIdentifier: "sendOrderDB", sender: nil)
+        self.performSegue(withIdentifier: "pass_order", sender: nil)
         }
     }
     

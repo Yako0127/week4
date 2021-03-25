@@ -12,13 +12,13 @@ class OrderTableViewCell: UITableViewCell {
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var contentLabel: UILabel!
     @IBOutlet weak var detailLabel: UILabel!
-    @IBOutlet weak var imgLabel: UIImageView!
+   // @IBOutlet weak var imgLabel: UIImageView!
     
     func setCellData(with cellData: DrinkData) {
         nameLabel.text = cellData.name
         contentLabel.text = cellData.content
         priceLabel.text = cellData.price
-        imgLabel.image = UIImage(named: cellData.image!)
+    //    imgLabel.image = UIImage(named: cellData.image!)
     }
 }
 
